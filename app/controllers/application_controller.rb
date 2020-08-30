@@ -13,7 +13,7 @@ class ApplicationController < ActionController::API
     #     token = headers.split(" ")[1]
 
     #     begin
-    #         user_id = JWT.decode(token, "DC060120", "HS256")[0]["user_id"]
+    #         user_id = JWT.decode(token, "movieshare")[0]["user_id"]
     #         user = User.find(user_id)
     #     rescue 
     #         user = nil

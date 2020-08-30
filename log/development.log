@@ -348,3 +348,105 @@ Processing by UsersController#login as */*
 Completed 200 OK in 226ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 966)
 
 
+Started POST "/users" for ::1 at 2020-08-27 23:48:42 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"tosh", "password"=>"[FILTERED]", "user"=>{"username"=>"tosh"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 485)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:13:in `logged_in?'
+Started POST "/users" for ::1 at 2020-08-27 23:49:16 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"tosh", "password"=>"[FILTERED]", "user"=>{"username"=>"tosh"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 3.4ms | Allocations: 474)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:13:in `logged_in?'
+Started GET "/users" for ::1 at 2020-08-27 23:49:50 -0400
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 457)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:13:in `logged_in?'
+Started GET "/users" for ::1 at 2020-08-27 23:50:17 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 4.6ms | Allocations: 5325)
+
+
+Started POST "/users" for ::1 at 2020-08-27 23:50:36 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"tosh", "password"=>"[FILTERED]", "user"=>{"username"=>"tosh"}}
+Completed 500 Internal Server Error in 7096ms (ActiveRecord: 0.0ms | Allocations: 48394)
+
+
+Started POST "/users" for ::1 at 2020-08-27 23:50:43 -0400
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:11:in `create'
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"tosh", "password"=>"[FILTERED]", "user"=>{"username"=>"tosh"}}
+Completed 500 Internal Server Error in 1695ms (ActiveRecord: 0.0ms | Allocations: 18594)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:11:in `create'
+Started POST "/users" for ::1 at 2020-08-27 23:51:11 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "zara"], ["password_digest", "$2a$12$7ADGLXF68rJ/x52zlrkAnumuKZv3r/0Mh94cpSvgQr2PEoSrx/yzq"], ["created_at", "2020-08-28 03:51:11.454485"], ["updated_at", "2020-08-28 03:51:11.454485"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 221ms (Views: 2.1ms | ActiveRecord: 5.8ms | Allocations: 6645)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (2.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/login" for ::1 at 2020-08-29 00:17:29 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.46ms)
+Completed 200 OK in 221ms (Views: 3.2ms | ActiveRecord: 5.5ms | Allocations: 5092)
+
+
+Started POST "/login" for ::1 at 2020-08-29 00:17:37 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 215ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 980)
+
+
