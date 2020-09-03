@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :chats
   resources :user_list_movies
   resources :movie_list_movies
   resources :list_movies
