@@ -450,3 +450,951 @@ Processing by UsersController#login as */*
 Completed 200 OK in 215ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 980)
 
 
+Started POST "/login" for ::1 at 2020-08-30 23:28:08 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"pass", "password"=>"[FILTERED]", "user"=>{"username"=>"pass"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "pass"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 2.3ms | Allocations: 1119)
+
+
+Started POST "/login" for ::1 at 2020-08-30 23:30:53 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"pass", "password"=>"[FILTERED]", "user"=>{"username"=>"pass"}}
+Completed 500 Internal Server Error in 73200ms (ActiveRecord: 16.5ms | Allocations: 130558)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `login'
+app/controllers/users_controller.rb:24:in `login'
+Started POST "/login" for ::1 at 2020-08-30 23:32:27 -0400
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.33ms)
+Completed 200 OK in 228ms (Views: 1.8ms | ActiveRecord: 12.1ms | Allocations: 5091)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:36:53 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Completed 200 OK in 206ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1061)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:36:57 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (81.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 365ms (Views: 0.6ms | ActiveRecord: 81.2ms | Allocations: 980)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:38:21 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"franck", "password"=>"[FILTERED]", "user"=>{"username"=>"franck"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "franck"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.61ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 752)
+
+
+Started POST "/users" for ::1 at 2020-08-31 00:41:41 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"franck", "password"=>"[FILTERED]", "user"=>{"username"=>"franck"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (7.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "franck"], ["password_digest", "$2a$12$EEqVuhTqAEHnoBYzSxo4BeHXictnf0yhN6FLG6NBVyB0DBCVRh/d6"], ["created_at", "2020-08-31 04:41:42.104758"], ["updated_at", "2020-08-31 04:41:42.104758"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 229ms (Views: 0.6ms | ActiveRecord: 9.9ms | Allocations: 3009)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:45:35 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"franck", "password"=>"[FILTERED]", "user"=>{"username"=>"franck"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "franck"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 212ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:51:19 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 259ms (Views: 0.6ms | ActiveRecord: 5.6ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:53:05 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 214ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 964)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:55:04 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 252ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 967)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:56:12 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 272ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:56:27 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.33ms)
+Completed 200 OK in 266ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:56:44 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.4ms)
+Completed 200 OK in 272ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 00:57:06 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 235ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 966)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:00:51 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 313ms (Views: 65.4ms | ActiveRecord: 0.2ms | Allocations: 967)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:01:36 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 211ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 967)
+
+
+Started POST "/users" for ::1 at 2020-08-31 01:05:17 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"tosh", "password"=>"[FILTERED]", "user"=>{"username"=>"tosh"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "tosh"], ["password_digest", "$2a$12$Aros2bQ/SVNcvNlCNMUj0ezcY3NAqfQmx4U3vY9ta5itkxQnoIcUC"], ["created_at", "2020-08-31 05:05:18.181827"], ["updated_at", "2020-08-31 05:05:18.181827"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 255ms (Views: 1.0ms | ActiveRecord: 0.8ms | Allocations: 2772)
+
+
+Started POST "/users" for ::1 at 2020-08-31 01:11:40 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"aka", "password"=>"[FILTERED]", "user"=>{"username"=>"aka"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "aka"], ["password_digest", "$2a$12$OrLAI015C.hnyrLEya/w.OT3tmE3Escflg7fCCKiG7HW9yBmPTY4u"], ["created_at", "2020-08-31 05:11:41.120880"], ["updated_at", "2020-08-31 05:11:41.120880"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 262ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 2789)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:12:39 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"aka", "password"=>"[FILTERED]", "user"=>{"username"=>"aka"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "aka"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 254ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 1033)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:17:42 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 228ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:25:24 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 257ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1048)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:26:38 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 213ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:27:46 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 250ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 964)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:29:05 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 269ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:29:25 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.23ms)
+Completed 200 OK in 282ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:29:40 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.3ms)
+Completed 200 OK in 261ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:30:26 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 256ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:30:36 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.34ms)
+Completed 200 OK in 209ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:31:27 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 293ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 967)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:34:49 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.55ms)
+Completed 200 OK in 367ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 967)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:35:16 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 243ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:35:36 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 241ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:38:53 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 215ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:40:03 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 217ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 01:42:17 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 247ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:01:27 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 200 OK in 241ms (Views: 0.7ms | ActiveRecord: 3.6ms | Allocations: 1052)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:04:45 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 255ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 964)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:08:01 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 227ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:08:37 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 258ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:12:07 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 229ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 964)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:16:10 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zaad", "password"=>"[FILTERED]", "user"=>{"username"=>"zaad"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zaad"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:16:47 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"dddd", "password"=>"[FILTERED]", "user"=>{"username"=>"dddd"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "dddd"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:17:16 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"wqdqw", "password"=>"[FILTERED]", "user"=>{"username"=>"wqdqw"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "wqdqw"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:23:36 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zakfkekw", "password"=>"[FILTERED]", "user"=>{"username"=>"zakfkekw"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zakfkekw"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 822)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:27:27 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"fwefe", "password"=>"[FILTERED]", "user"=>{"username"=>"fwefe"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "fwefe"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:28:09 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"fwefw", "password"=>"[FILTERED]", "user"=>{"username"=>"fwefw"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "fwefw"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:29:11 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"fwef", "password"=>"[FILTERED]", "user"=>{"username"=>"fwef"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "fwef"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:29:37 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"ddqwdq", "password"=>"[FILTERED]", "user"=>{"username"=>"ddqwdq"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ddqwdq"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:29:52 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 209ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:29:54 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 263ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:32:16 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"fwe", "password"=>"[FILTERED]", "user"=>{"username"=>"fwe"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "fwe"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:32:22 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 212ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 966)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:32:23 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 232ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:38:53 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 209ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 860)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:38:58 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 256ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 967)
+
+
+Started POST "/login" for ::1 at 2020-08-31 02:39:06 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 254ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 03:00:31 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.08ms)
+Completed 200 OK in 210ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 1048)
+
+
+Started POST "/login" for ::1 at 2020-08-31 03:00:33 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 258ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 03:09:18 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 212ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 1048)
+
+
+Started POST "/login" for ::1 at 2020-08-31 03:09:20 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.2ms)
+Completed 200 OK in 267ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 16:10:19 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.51ms)
+Completed 200 OK in 274ms (Views: 2.5ms | ActiveRecord: 2.3ms | Allocations: 861)
+
+
+Started POST "/login" for ::1 at 2020-08-31 16:10:31 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.17ms)
+Completed 200 OK in 273ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 16:10:33 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.48ms)
+Completed 200 OK in 248ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 966)
+
+
+Started POST "/login" for ::1 at 2020-08-31 16:43:22 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara59@msn.com", "password"=>"[FILTERED]", "user"=>{"username"=>"zara59@msn.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara59@msn.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 820)
+
+
+Started POST "/login" for ::1 at 2020-08-31 16:43:32 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 223ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 16:43:33 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.22ms)
+Completed 200 OK in 377ms (Views: 2.5ms | ActiveRecord: 5.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:49:58 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara59@msn.com", "password"=>"[FILTERED]", "user"=>{"username"=>"zara59@msn.com"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara59@msn.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.42ms)
+Completed 200 OK in 10ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 821)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:50:03 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.33ms)
+Completed 200 OK in 262ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 964)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:50:04 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Completed 200 OK in 277ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:50:32 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara59@msn.com", "password"=>"[FILTERED]", "user"=>{"username"=>"zara59@msn.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara59@msn.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:51:35 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 227ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 964)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:51:36 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 278ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 966)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:55:17 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.95ms)
+Completed 200 OK in 250ms (Views: 3.2ms | ActiveRecord: 4.9ms | Allocations: 967)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:55:18 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Completed 200 OK in 285ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:57:25 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.82ms)
+Completed 200 OK in 265ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 966)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:57:27 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.21ms)
+Completed 200 OK in 266ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 963)
+
+
+Started POST "/users" for ::1 at 2020-08-31 22:42:39 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (6.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "zara"], ["password_digest", "$2a$12$JOLtrB03UGGL8PborTvfIOnDEvQRzVM1NNmJ1SRSGMpjGChgBoTGO"], ["created_at", "2020-09-01 02:42:40.031322"], ["updated_at", "2020-09-01 02:42:40.031322"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.65ms)
+Completed 200 OK in 286ms (Views: 3.8ms | ActiveRecord: 12.2ms | Allocations: 2787)
+
+
+Started POST "/login" for ::1 at 2020-08-31 23:52:55 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara59@msn.com", "password"=>"[FILTERED]", "user"=>{"username"=>"zara59@msn.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara59@msn.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.05ms)
+Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 820)
+
+
+Started POST "/login" for ::1 at 2020-08-31 23:53:00 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.15ms)
+Completed 200 OK in 250ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 964)
+
+
+Started POST "/login" for ::1 at 2020-08-31 23:53:01 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 248ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-09-01 22:53:53 -0400
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara59@msn.com", "password"=>"[FILTERED]", "user"=>{"username"=>"zara59@msn.com"}}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara59@msn.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.49ms)
+Completed 200 OK in 16ms (Views: 3.2ms | ActiveRecord: 11.3ms | Allocations: 1708)
+
+
+Started POST "/login" for ::1 at 2020-09-01 22:54:00 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.09ms)
+Completed 200 OK in 223ms (Views: 1.4ms | ActiveRecord: 9.0ms | Allocations: 4135)
+
+
+Started POST "/login" for ::1 at 2020-09-01 22:54:01 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 220ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 980)
+
+
+Started POST "/login" for ::1 at 2020-09-01 23:20:10 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 211ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 1060)
+
+
+Started POST "/login" for ::1 at 2020-09-01 23:20:11 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 220ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 980)
+
+
+Started POST "/login" for ::1 at 2020-09-02 00:45:54 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.07ms)
+Completed 200 OK in 202ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1049)
+
+
+Started POST "/login" for ::1 at 2020-09-02 00:45:56 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 247ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-09-02 00:46:08 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 210ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-09-02 00:46:30 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 225ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/users" for ::1 at 2020-09-02 01:06:57 -0400
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"patata", "password"=>"[FILTERED]", "user"=>{"username"=>"patata"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (5.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "patata"], ["password_digest", "$2a$12$8b/UN9w9ByDDTXPxpB4Hju2N4RJeOsf8mBYwHbeT4hELsmVhF7W1."], ["created_at", "2020-09-02 05:06:57.799031"], ["updated_at", "2020-09-02 05:06:57.799031"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 214ms (Views: 0.4ms | ActiveRecord: 7.0ms | Allocations: 3013)
+
+
+Started POST "/login" for ::1 at 2020-09-02 01:07:14 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 205ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1033)
+
+
+Started POST "/login" for ::1 at 2020-09-02 01:19:49 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 239ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 1049)
+
+
+Started POST "/login" for ::1 at 2020-09-02 01:19:53 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 219ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 964)
+
+
+Started POST "/login" for ::1 at 2020-09-02 10:12:08 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.22ms)
+Completed 200 OK in 275ms (Views: 2.9ms | ActiveRecord: 1.2ms | Allocations: 1049)
+
+
+Started POST "/login" for ::1 at 2020-09-02 10:12:09 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 263ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 966)
+
+
+Started POST "/login" for ::1 at 2020-09-02 10:53:55 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 209ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 1049)
+
+
+Started POST "/login" for ::1 at 2020-09-02 10:53:57 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.33ms)
+Completed 200 OK in 266ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-09-02 15:44:46 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara59@msn.com", "password"=>"[FILTERED]", "user"=>{"username"=>"zara59@msn.com"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara59@msn.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.32ms)
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 1.3ms | Allocations: 821)
+
+
+Started POST "/login" for ::1 at 2020-09-02 15:44:50 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.14ms)
+Completed 200 OK in 263ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 980)
+
+
+Started POST "/login" for ::1 at 2020-09-02 15:44:51 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 263ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 972)
+
+
+Started POST "/login" for ::1 at 2020-09-02 15:44:52 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.28ms)
+Completed 200 OK in 266ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 963)
+
+
