@@ -1,0 +1,2 @@
+class UserListMovie < ApplicationRecord
+end
