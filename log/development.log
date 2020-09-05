@@ -1507,3 +1507,1742 @@ Migrating to RenameMovieListIdToListMovieId (20200903054545)
   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_list_movies" ON "users"."id" = "user_list_movies"."user_id" INNER JOIN "list_movies" ON "user_list_movies"."list_movie_id" = "list_movies"."id" INNER JOIN "movie_list_movies" ON "list_movies"."id" = "movie_list_movies"."list_movie_id" WHERE "movie_list_movies"."movie_id" = $1 LIMIT $2[0m  [["movie_id", 1], ["LIMIT", 11]]
+Started POST "/login" for ::1 at 2020-09-03 07:39:14 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.89ms)
+Completed 200 OK in 315ms (Views: 3.2ms | ActiveRecord: 4.9ms | Allocations: 5087)
+
+
+Started POST "/login" for ::1 at 2020-09-03 07:39:15 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 224ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 980)
+
+
+Started POST "/login" for ::1 at 2020-09-03 10:31:16 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 262ms (Views: 0.8ms | ActiveRecord: 0.7ms | Allocations: 1077)
+
+
+Started POST "/login" for ::1 at 2020-09-03 10:31:16 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 261ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 989)
+
+
+Started POST "/login" for ::1 at 2020-09-03 10:31:17 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 267ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 980)
+
+
+Started POST "/login" for ::1 at 2020-09-04 01:07:50 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.07ms)
+Completed 200 OK in 218ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 1049)
+
+
+Started POST "/login" for ::1 at 2020-09-04 01:07:52 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.17ms)
+Completed 200 OK in 237ms (Views: 2.1ms | ActiveRecord: 2.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-09-04 14:20:19 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.22ms)
+Completed 200 OK in 279ms (Views: 4.0ms | ActiveRecord: 5.9ms | Allocations: 1050)
+
+
+Started POST "/login" for ::1 at 2020-09-04 14:20:22 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 272ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 964)
+
+
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "list_movies"[0m
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" ORDER BY "list_movies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mListMovie Create (7.3ms)[0m  [1m[32mINSERT INTO "list_movies" ("name", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "paul"], ["category", "drama"], ["created_at", "2020-09-04 18:55:12.638749"], ["updated_at", "2020-09-04 18:55:12.638749"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "list_movies"[0m
+Started POST "/login" for ::1 at 2020-09-04 21:25:35 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.82ms)
+Completed 200 OK in 247ms (Views: 8.9ms | ActiveRecord: 6.7ms | Allocations: 1051)
+
+
+Started POST "/login" for ::1 at 2020-09-04 21:25:39 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 235ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 964)
+
+
+Started POST "/login" for ::1 at 2020-09-04 22:56:48 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.49ms)
+Completed 200 OK in 227ms (Views: 8.2ms | ActiveRecord: 1.0ms | Allocations: 1049)
+
+
+Started POST "/login" for ::1 at 2020-09-04 22:56:50 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.32ms)
+Completed 200 OK in 239ms (Views: 3.7ms | ActiveRecord: 1.1ms | Allocations: 963)
+
+
+Started GET "/listMovie" for ::1 at 2020-09-05 00:12:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/listMovie"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "//list_movies" for ::1 at 2020-09-05 00:12:47 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ListMoviesController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[36mListMovie Load (6.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "list_movies"[0m
+  [1m[36mListMovie Load (0.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mListMovie Load (3.1ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "movie_list_movies"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_list_movies"[0m
+  [1m[36mUserListMovie Load (0.8ms)[0m  [1m[34mSELECT "user_list_movies".* FROM "user_list_movies" ORDER BY "user_list_movies"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserListMovie Create (8.4ms)[0m  [1m[32mINSERT INTO "user_list_movies" ("user_id", "list_movie_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["list_movie_id", 2], ["created_at", "2020-09-05 04:26:59.534287"], ["updated_at", "2020-09-05 04:26:59.534287"]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserListMovie Load (0.2ms)[0m  [1m[34mSELECT "user_list_movies".* FROM "user_list_movies" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users" for ::1 at 2020-09-05 00:30:58 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.7ms)
+Completed 200 OK in 31ms (Views: 20.5ms | ActiveRecord: 0.5ms | Allocations: 8779)
+
+
+Started GET "/user/1" for ::1 at 2020-09-05 00:31:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-09-05 00:31:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 973)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:32:03 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 200 OK in 29ms (Views: 5.6ms | ActiveRecord: 5.1ms | Allocations: 9242)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:35:01 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 3.5ms | Allocations: 6892)
+
+
+  
+SyntaxError (/Users/zato/Flatiron/code/MOD5/shareMyMovie/ShareMyMovie/app/serializers/user_serializer.rb:4: syntax error, unexpected end):
+  
+app/serializers/user_serializer.rb:4: syntax error, unexpected end
+app/serializers/user_serializer.rb:4: syntax error, unexpected end
+app/controllers/users_controller.rb:11:in `show'
+Started GET "/users/1" for ::1 at 2020-09-05 00:35:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 15ms (Views: 3.2ms | ActiveRecord: 2.8ms | Allocations: 7287)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:35:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (34.29ms)
+Completed 200 OK in 63ms (Views: 46.4ms | ActiveRecord: 6.7ms | Allocations: 20880)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:37:44 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 40ms (Views: 2.0ms | ActiveRecord: 26.6ms | Allocations: 7142)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:39:57 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (17.45ms)
+Completed 200 OK in 36ms (Views: 16.4ms | ActiveRecord: 7.6ms | Allocations: 16136)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:45:55 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (27.31ms)
+Completed 200 OK in 52ms (Views: 30.7ms | ActiveRecord: 1.3ms | Allocations: 15663)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:46:48 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (11.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.14ms)
+Completed 200 OK in 19ms (Views: 4.8ms | ActiveRecord: 12.2ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:47:12 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.95ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 1.2ms | Allocations: 2580)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:50:16 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (26.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.27ms)
+Completed 200 OK in 34ms (Views: 5.3ms | ActiveRecord: 27.1ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:51:33 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (2.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.05ms)
+Completed 200 OK in 15ms (Views: 4.7ms | ActiveRecord: 8.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:53:00 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.65ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.7ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:53:08 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.82ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.7ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:53:47 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.01ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.7ms | Allocations: 2580)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:56:07 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.71ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:58:08 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.33ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.7ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 00:59:03 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (2.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.37ms)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 2.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:00:28 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (33.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (38.46ms)
+Completed 200 OK in 42ms (Views: 6.0ms | ActiveRecord: 33.6ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:00:34 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (5.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.9ms)
+Completed 200 OK in 12ms (Views: 4.6ms | ActiveRecord: 6.0ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:00:51 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (6.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (32.04ms)
+Completed 200 OK in 38ms (Views: 25.8ms | ActiveRecord: 9.5ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:01:31 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.23ms)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 0.5ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:02:18 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (3.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (25.77ms)
+Completed 200 OK in 38ms (Views: 22.6ms | ActiveRecord: 9.1ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:02:47 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (19.57ms)
+Completed 200 OK in 31ms (Views: 18.3ms | ActiveRecord: 2.2ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:02:53 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.3ms)
+Completed 200 OK in 25ms (Views: 14.7ms | ActiveRecord: 4.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:03:08 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (25.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (22.73ms)
+Completed 200 OK in 58ms (Views: 23.0ms | ActiveRecord: 25.9ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:05:02 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.93ms)
+Completed 200 OK in 29ms (Views: 7.0ms | ActiveRecord: 0.8ms | Allocations: 2582)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:05:11 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (11.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.03ms)
+Completed 200 OK in 18ms (Views: 4.6ms | ActiveRecord: 11.9ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:05:23 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.04ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.6ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:11:13 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.32ms)
+Completed 200 OK in 19ms (Views: 11.2ms | ActiveRecord: 1.8ms | Allocations: 2667)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:11:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.98ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 2577)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:11:59 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.95ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 1.4ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:16:55 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.18ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:17:22 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.99ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:17:30 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.42ms)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 2.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:19:02 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.03ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:19:21 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.64ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 1.3ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:24:00 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (3.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.81ms)
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 3.2ms | Allocations: 2580)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:51:24 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.96ms)
+Completed 200 OK in 16ms (Views: 10.1ms | ActiveRecord: 2.7ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:52:56 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (20.34ms)
+Completed 200 OK in 42ms (Views: 23.0ms | ActiveRecord: 4.5ms | Allocations: 2582)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:53:36 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.94ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 1.2ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 01:58:07 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.33ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 2582)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:03:06 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (2.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.8ms)
+Completed 200 OK in 32ms (Views: 17.7ms | ActiveRecord: 4.0ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:03:14 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (8.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.88ms)
+Completed 200 OK in 15ms (Views: 4.2ms | ActiveRecord: 8.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:09:11 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.1ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.63ms)
+Completed 200 OK in 17ms (Views: 9.6ms | ActiveRecord: 3.7ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:10:07 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (5.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.68ms)
+Completed 200 OK in 12ms (Views: 4.8ms | ActiveRecord: 5.7ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:11:00 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.97ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 1.2ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:13:50 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.07ms)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 1.1ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:16:33 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.65ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 2.2ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:25:12 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.0ms)
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 3.0ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:26:11 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.46ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:26:54 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.43ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:27:59 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.8ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.2ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:30:43 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.24ms)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 3.9ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:30:59 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.01ms)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 1.9ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:31:04 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (13.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (18.73ms)
+Completed 200 OK in 32ms (Views: 5.7ms | ActiveRecord: 24.2ms | Allocations: 2583)
+
+
+Started GET "/users/undefined" for ::1 at 2020-09-05 02:31:07 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 644)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:10:in `show'
+Started GET "/users/undefined" for ::1 at 2020-09-05 02:32:42 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 639)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:10:in `show'
+Started GET "/users/undefined" for ::1 at 2020-09-05 02:34:54 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms | Allocations: 638)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:10:in `show'
+Started POST "/login" for ::1 at 2020-09-05 02:41:00 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.34ms)
+Completed 200 OK in 267ms (Views: 17.8ms | ActiveRecord: 2.9ms | Allocations: 2926)
+
+
+Started POST "/login" for ::1 at 2020-09-05 02:41:03 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 239ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1004)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:41:03 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.79ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.8ms | Allocations: 2585)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:42:39 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.08ms)
+Completed 200 OK in 19ms (Views: 5.3ms | ActiveRecord: 11.3ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:42:52 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (14.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (19.07ms)
+Completed 200 OK in 22ms (Views: 5.2ms | ActiveRecord: 14.7ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 02:46:53 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.0ms)
+Completed 200 OK in 11ms (Views: 4.2ms | ActiveRecord: 4.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 03:21:08 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.6ms)
+Completed 200 OK in 27ms (Views: 17.1ms | ActiveRecord: 1.6ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 03:39:36 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (2.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (20.21ms)
+Completed 200 OK in 41ms (Views: 22.5ms | ActiveRecord: 2.8ms | Allocations: 15669)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 03:43:08 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.29ms)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 3.1ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 03:43:33 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.3ms)
+Completed 200 OK in 16ms (Views: 4.1ms | ActiveRecord: 8.9ms | Allocations: 2579)
+
+
+Started POST "/login" for ::1 at 2020-09-05 13:25:37 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.52ms)
+Completed 200 OK in 252ms (Views: 11.3ms | ActiveRecord: 2.1ms | Allocations: 1302)
+
+
+Started POST "/login" for ::1 at 2020-09-05 13:25:38 -0400
+Started GET "/users/1" for ::1 at 2020-09-05 13:25:38 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 233ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 970)
+
+
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.72ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.0ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 13:27:00 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.46ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 1.3ms | Allocations: 2580)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 13:27:24 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.61ms)
+Completed 200 OK in 17ms (Views: 9.4ms | ActiveRecord: 4.9ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 13:40:32 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.0ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 1.6ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 13:41:00 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.11ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 2.3ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 13:44:46 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.09ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 1.0ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 13:46:33 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.75ms)
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 2.3ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 13:46:57 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.12ms)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 1.6ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 13:48:48 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.83ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.7ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 13:58:55 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.6ms)
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 3.3ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 14:00:47 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.55ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.9ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 14:09:04 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.71ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 1.2ms | Allocations: 2669)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 14:10:13 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (12.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (19.9ms)
+Completed 200 OK in 40ms (Views: 8.1ms | ActiveRecord: 28.8ms | Allocations: 2580)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 14:18:16 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.14ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 1.3ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 14:27:34 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.1ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (47.24ms)
+Completed 200 OK in 70ms (Views: 52.6ms | ActiveRecord: 3.6ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:10:31 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (20.12ms)
+Completed 200 OK in 35ms (Views: 22.6ms | ActiveRecord: 1.2ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:11:15 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (2.1ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.63ms)
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 4.5ms | Allocations: 2579)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:24:44 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.92ms)
+Completed 200 OK in 219ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 1059)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:24:44 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 203ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 966)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:24:45 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+Started GET "/users/1" for ::1 at 2020-09-05 16:24:45 -0400
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 214ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 1173)
+
+
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.98ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.1ms | Allocations: 2666)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:25:49 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 225ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 968)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:25:50 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 228ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1000)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:25:51 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.65ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms | Allocations: 2579)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:28:49 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 239ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 963)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:28:52 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 245ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 978)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:28:52 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.31ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:31:23 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.33ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.0ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:32:48 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.54ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:36:35 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.59ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.6ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:38:02 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.56ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 1.1ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:50:18 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.28ms)
+Completed 200 OK in 34ms (Views: 17.6ms | ActiveRecord: 1.2ms | Allocations: 15600)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:51:53 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.7ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 2579)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:53:23 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.17ms)
+Completed 200 OK in 211ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1219)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:53:25 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.42ms)
+Completed 200 OK in 230ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 975)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:53:25 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.71ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:53:28 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (4.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.57ms)
+Completed 200 OK in 11ms (Views: 4.7ms | ActiveRecord: 4.6ms | Allocations: 2579)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:58:21 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.28ms)
+Completed 200 OK in 278ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 969)
+
+
+Started POST "/login" for ::1 at 2020-09-05 16:58:22 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 267ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1011)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 16:58:23 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.81ms)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 1.1ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:01:02 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.37ms)
+Completed 200 OK in 16ms (Views: 6.6ms | ActiveRecord: 8.1ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:01:15 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.92ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.9ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:12:01 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.84ms)
+Completed 200 OK in 26ms (Views: 16.2ms | ActiveRecord: 1.7ms | Allocations: 2666)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:12:25 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.43ms)
+Completed 200 OK in 14ms (Views: 6.9ms | ActiveRecord: 2.1ms | Allocations: 2579)
+
+
+Started GET "/users/undefined" for ::1 at 2020-09-05 17:13:05 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 640)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:10:in `show'
+Started GET "/users/undefined" for ::1 at 2020-09-05 17:13:17 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms | Allocations: 639)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:10:in `show'
+Started POST "/login" for ::1 at 2020-09-05 17:16:04 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 232ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 966)
+
+
+Started POST "/login" for ::1 at 2020-09-05 17:16:06 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 237ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1003)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:16:06 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (18.89ms)
+Completed 200 OK in 37ms (Views: 24.4ms | ActiveRecord: 0.9ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:19:30 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (22.98ms)
+Completed 200 OK in 30ms (Views: 23.1ms | ActiveRecord: 1.3ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:20:38 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (10.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (35.33ms)
+Completed 200 OK in 46ms (Views: 25.6ms | ActiveRecord: 10.8ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:21:40 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.54ms)
+Completed 200 OK in 58ms (Views: 3.5ms | ActiveRecord: 4.0ms | Allocations: 2582)
+
+
+Started POST "/login" for ::1 at 2020-09-05 17:24:18 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 218ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 964)
+
+
+Started POST "/login" for ::1 at 2020-09-05 17:24:23 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+Started GET "/users/1" for ::1 at 2020-09-05 17:24:23 -0400
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 230ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1295)
+
+
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.21ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:29:14 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.57ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:30:38 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.68ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.9ms | Allocations: 2579)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 17:54:51 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 1, name: "marc", category: "anime", created_at: "2020-09-03 05:28:11", updated_at: "2020-09-03 05:28:11">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (22.57ms)
+Completed 200 OK in 54ms (Views: 36.2ms | ActiveRecord: 1.9ms | Allocations: 2666)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4266135280557325560)[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddExtraUrlToMovies (20200905220144)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.0ms)[0m  [1m[35mALTER TABLE "movies" ADD "extra_url" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200905220144"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4266135280557325560)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
