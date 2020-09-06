@@ -3448,3 +3448,643 @@ app/controllers/movies_controller.rb:5:in `create'
   [1m[36mListMovie Destroy (0.8ms)[0m  [1m[31mDELETE FROM "list_movies" WHERE "list_movies"."id" = $1[0m  [["id", 2]]
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "list_movies"[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4266135280557325560)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveNameFromListMovies (20200906020546)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.1ms)[0m  [1m[35mALTER TABLE "list_movies" DROP COLUMN "name"[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200906020546"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4266135280557325560)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/login" for ::1 at 2020-09-05 22:14:20 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.32ms)
+Completed 200 OK in 221ms (Views: 1.9ms | ActiveRecord: 5.1ms | Allocations: 5089)
+
+
+Started POST "/login" for ::1 at 2020-09-05 22:14:21 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 235ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 996)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 22:14:21 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (48.48ms)
+Completed 200 OK in 63ms (Views: 53.9ms | ActiveRecord: 8.0ms | Allocations: 13925)
+
+
+Started POST "/movies" for ::1 at 2020-09-05 22:15:06 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Dragon Ball Z: Bojack Unbound", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect", "rating"=>4, "description"=>"https://www.imdb.com/title/tt0142238", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560", "list_movie"=>"Dbz", "existing_list"=>"", "movie"=>{"name"=>"Dragon Ball Z: Bojack Unbound", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect", "rating"=>4, "description"=>"https://www.imdb.com/title/tt0142238", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560"}}
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", ""], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[36mListMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "list_movies" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "Dbz"], ["created_at", "2020-09-06 02:15:06.844787"], ["updated_at", "2020-09-06 02:15:06.844787"]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 15.7ms | Allocations: 9693)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'descritpion' for Movie.):
+  
+app/controllers/movies_controller.rb:7:in `create'
+Started POST "/login" for ::1 at 2020-09-05 22:19:15 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 215ms (Views: 0.6ms | ActiveRecord: 2.6ms | Allocations: 4204)
+
+
+Started POST "/login" for ::1 at 2020-09-05 22:19:17 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 248ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 979)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 22:19:17 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (13.27ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 3.1ms | Allocations: 9087)
+
+
+Started POST "/movies" for ::1 at 2020-09-05 22:20:50 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Dragon Ball Z: Bojack Unbound", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect", "rating"=>2, "description"=>"https://www.imdb.com/title/tt0142238", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560", "list_movie"=>"dedes", "existing_list"=>"Drama", "movie"=>{"name"=>"Dragon Ball Z: Bojack Unbound", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect", "rating"=>2, "description"=>"https://www.imdb.com/title/tt0142238", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560"}}
+  [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", "Drama"], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+Completed 500 Internal Server Error in 1828496ms (ActiveRecord: 2.9ms | Allocations: 166989)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/movies_controller.rb:16:in `create'
+Started POST "/login" for ::1 at 2020-09-05 22:51:45 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.35ms)
+Completed 200 OK in 217ms (Views: 2.9ms | ActiveRecord: 5.1ms | Allocations: 5087)
+
+
+Started POST "/login" for ::1 at 2020-09-05 22:51:46 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 238ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 996)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 22:51:46 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (43.57ms)
+Completed 200 OK in 57ms (Views: 52.0ms | ActiveRecord: 3.9ms | Allocations: 13873)
+
+
+Started POST "/movies" for ::1 at 2020-09-05 22:52:20 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Dragon Ball Z: Bojack Unbound", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect", "rating"=>4, "description"=>"https://www.imdb.com/title/tt0142238", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560", "list_movie"=>"dbz", "existing_list"=>"", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"Dragon Ball Z: Bojack Unbound", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect", "rating"=>4, "description"=>"https://www.imdb.com/title/tt0142238", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560"}}
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", ""], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.5ms | Allocations: 1739)
+
+
+  
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  
+app/controllers/movies_controller.rb:17:in `create'
+Started POST "/movies" for ::1 at 2020-09-05 22:54:06 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Dragon Ball Z: Bojack Unbound", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect", "rating"=>4, "description"=>"https://www.imdb.com/title/tt0142238", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560", "list_movie"=>"dbz", "existing_list"=>"Drama", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"Dragon Ball Z: Bojack Unbound", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect", "rating"=>4, "description"=>"https://www.imdb.com/title/tt0142238", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560"}}
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", "Drama"], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:18:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:19:in `create'
+  [1m[36mMovie Create (5.0ms)[0m  [1m[32mINSERT INTO "movies" ("name", "picture", "rating", "description", "extra_info", "created_at", "updated_at", "extra_url", "list_movie_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dragon Ball Z: Bojack Unbound"], ["picture", "https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect"], ["rating", 4], ["description", "https://www.imdb.com/title/tt0142238"], ["extra_info", "iTunes"], ["created_at", "2020-09-06 02:54:06.782597"], ["updated_at", "2020-09-06 02:54:06.782597"], ["extra_url", "https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560"], ["list_movie_id", 6]]
+  ↳ app/controllers/movies_controller.rb:19:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:19:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+  [1m[36mUserListMovie Create (3.1ms)[0m  [1m[32mINSERT INTO "user_list_movies" ("user_id", "list_movie_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["list_movie_id", 6], ["created_at", "2020-09-06 02:58:37.715464"], ["updated_at", "2020-09-06 02:58:37.715464"]]
+  ↳ (byebug):1:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_list_movies" ON "users"."id" = "user_list_movies"."user_id" WHERE "user_list_movies"."list_movie_id" = $1 LIMIT $2[0m  [["list_movie_id", 6], ["LIMIT", 11]]
+  ↳ app/controllers/movies_controller.rb:23:in `create'
+Completed 500 Internal Server Error in 509459ms (ActiveRecord: 22.1ms | Allocations: 90321)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/movies_controller.rb:23:in `create'
+Started POST "/movies" for ::1 at 2020-09-05 23:04:57 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"BoJack Horseman", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/4e4d50a0040fd4500193202edbafce6a/Redirect", "rating"=>1, "description"=>"https://www.imdb.com/title/tt3398228", "extra_info"=>"Netflix", "extra_url"=>"https://www.netflix.com/title/70298933", "list_movie"=>"dwedew", "existing_list"=>"Manga", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"BoJack Horseman", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/4e4d50a0040fd4500193202edbafce6a/Redirect", "rating"=>1, "description"=>"https://www.imdb.com/title/tt3398228", "extra_info"=>"Netflix", "extra_url"=>"https://www.netflix.com/title/70298933"}}
+  [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", "Manga"], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:18:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:19:in `create'
+  [1m[36mMovie Create (1.0ms)[0m  [1m[32mINSERT INTO "movies" ("name", "picture", "rating", "description", "extra_info", "created_at", "updated_at", "extra_url", "list_movie_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "BoJack Horseman"], ["picture", "https://utellyassets9-1.imgix.net/api/Images/4e4d50a0040fd4500193202edbafce6a/Redirect"], ["rating", 1], ["description", "https://www.imdb.com/title/tt3398228"], ["extra_info", "Netflix"], ["created_at", "2020-09-06 03:04:57.680334"], ["updated_at", "2020-09-06 03:04:57.680334"], ["extra_url", "https://www.netflix.com/title/70298933"], ["list_movie_id", 5]]
+  ↳ app/controllers/movies_controller.rb:19:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:19:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+  [1m[36mUserListMovie Create (3.6ms)[0m  [1m[32mINSERT INTO "user_list_movies" ("user_id", "list_movie_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["list_movie_id", 5], ["created_at", "2020-09-06 03:04:57.719815"], ["updated_at", "2020-09-06 03:04:57.719815"]]
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+Started GET "/users/1" for ::1 at 2020-09-05 23:14:18 -0400
+Started GET "/users/1" for ::1 at 2020-09-05 23:14:18 -0400
+Completed 500 Internal Server Error in 561132ms (ActiveRecord: 18.1ms | Allocations: 378444)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/movies_controller.rb:27:in `create'
+Started POST "/login" for ::1 at 2020-09-05 23:14:18 -0400
+Started POST "/login" for ::1 at 2020-09-05 23:14:18 -0400
+Started POST "/login" for ::1 at 2020-09-05 23:14:19 -0400
+Processing by UsersController#login as */*
+Processing by UsersController#show as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+Processing by UsersController#login as */*
+Processing by UsersController#show as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  Parameters: {"id"=>"1"}
+  ↳ app/controllers/users_controller.rb:30:in `login'
+  [1m[36mUser Load (28.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+  [1m[36mUser Load (220.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  [1m[36mUser Load (442.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.79ms)
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 200 OK in 703ms (Views: 201.0ms | ActiveRecord: 34.3ms | Allocations: 2080651)
+
+
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.94ms)
+Completed 200 OK in 944ms (Views: 440.2ms | ActiveRecord: 18.7ms | Allocations: 2404333)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.34ms)
+[active_model_serializers]   [1m[36mListMovie Load (43.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   [1m[36mListMovie Load (232.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 967ms (Views: 27.5ms | ActiveRecord: 243.0ms | Allocations: 2610187)
+
+
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (465.46ms)
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (403.44ms)
+Completed 200 OK in 1062ms (Views: 526.1ms | ActiveRecord: 61.5ms | Allocations: 3427327)
+
+
+Completed 200 OK in 1087ms (Views: 187.4ms | ActiveRecord: 687.7ms | Allocations: 3647974)
+
+
+Started POST "/login" for ::1 at 2020-09-05 23:14:21 -0400
+Started POST "/login" for ::1 at 2020-09-05 23:14:21 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+Started POST "/login" for ::1 at 2020-09-05 23:14:21 -0400
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.9ms)
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+Completed 200 OK in 259ms (Views: 10.3ms | ActiveRecord: 17.2ms | Allocations: 532042)
+
+
+  ↳ app/controllers/users_controller.rb:30:in `login'
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.27ms)
+Completed 200 OK in 516ms (Views: 22.7ms | ActiveRecord: 12.8ms | Allocations: 1096009)
+
+
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.33ms)
+Completed 200 OK in 256ms (Views: 16.7ms | ActiveRecord: 12.1ms | Allocations: 507230)
+
+
+Started POST "/login" for ::1 at 2020-09-05 23:14:41 -0400
+Started GET "/users/1" for ::1 at 2020-09-05 23:14:41 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (16.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.47ms)
+  ↳ app/controllers/users_controller.rb:10:in `show'
+Completed 200 OK in 234ms (Views: 15.1ms | ActiveRecord: 2.6ms | Allocations: 5666)
+
+
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (44.08ms)
+Completed 200 OK in 302ms (Views: 51.3ms | ActiveRecord: 12.1ms | Allocations: 24141)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 23:15:54 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.22ms)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.9ms | Allocations: 2764)
+
+
+Started POST "/login" for ::1 at 2020-09-05 23:26:39 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.37ms)
+Completed 200 OK in 219ms (Views: 1.9ms | ActiveRecord: 4.4ms | Allocations: 5097)
+
+
+Started POST "/login" for ::1 at 2020-09-05 23:26:40 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 203ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 993)
+
+
+Started POST "/login" for ::1 at 2020-09-05 23:26:43 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (35.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.44ms)
+Started GET "/users/1" for ::1 at 2020-09-05 23:26:44 -0400
+Completed 200 OK in 556ms (Views: 1.7ms | ActiveRecord: 35.0ms | Allocations: 1312)
+
+
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (44.76ms)
+Completed 200 OK in 59ms (Views: 50.9ms | ActiveRecord: 6.1ms | Allocations: 14010)
+
+
+Started POST "/movies" for ::1 at 2020-09-05 23:27:34 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Rambo: First Blood Part II", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/2d2af388c972b6336d81986ce17f531f/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0089880", "extra_info"=>"Google Play", "extra_url"=>"https://play.google.com/store/movies/details/Rambo_First_Blood_II?gl=US&hl=en&id=Vt4PyVlN5Ys", "list_movie"=>"war", "existing_list"=>"", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"Rambo: First Blood Part II", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/2d2af388c972b6336d81986ce17f531f/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0089880", "extra_info"=>"Google Play", "extra_url"=>"https://play.google.com/store/movies/details/Rambo_First_Blood_II?gl=US&hl=en&id=Vt4PyVlN5Ys"}}
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", ""], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:6:in `create'
+  [1m[36mListMovie Create (12.6ms)[0m  [1m[32mINSERT INTO "list_movies" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "war"], ["created_at", "2020-09-06 03:27:34.482320"], ["updated_at", "2020-09-06 03:27:34.482320"]]
+  ↳ app/controllers/movies_controller.rb:6:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 16.6ms | Allocations: 10575)
+
+
+  
+NoMethodError (undefined method `user_list_movies' for nil:NilClass):
+  
+app/controllers/movies_controller.rb:11:in `create'
+Started POST "/movies" for ::1 at 2020-09-05 23:30:24 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Rambo: First Blood Part II", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/2d2af388c972b6336d81986ce17f531f/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0089880", "extra_info"=>"Google Play", "extra_url"=>"https://play.google.com/store/movies/details/Rambo_First_Blood_II?gl=US&hl=en&id=Vt4PyVlN5Ys", "list_movie"=>"war", "existing_list"=>"Drama", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"Rambo: First Blood Part II", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/2d2af388c972b6336d81986ce17f531f/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0089880", "extra_info"=>"Google Play", "extra_url"=>"https://play.google.com/store/movies/details/Rambo_First_Blood_II?gl=US&hl=en&id=Vt4PyVlN5Ys"}}
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", "Drama"], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "picture", "rating", "description", "extra_info", "created_at", "updated_at", "extra_url", "list_movie_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Rambo: First Blood Part II"], ["picture", "https://utellyassets9-1.imgix.net/api/Images/2d2af388c972b6336d81986ce17f531f/Redirect"], ["rating", 5], ["description", "https://www.imdb.com/title/tt0089880"], ["extra_info", "Google Play"], ["created_at", "2020-09-06 03:30:24.507532"], ["updated_at", "2020-09-06 03:30:24.507532"], ["extra_url", "https://play.google.com/store/movies/details/Rambo_First_Blood_II?gl=US&hl=en&id=Vt4PyVlN5Ys"], ["list_movie_id", 6]]
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+Completed 500 Internal Server Error in 520278ms (ActiveRecord: 19.3ms | Allocations: 91308)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 23:39:04 -0400
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/movies_controller.rb:29:in `create'
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (87.39ms)
+Completed 200 OK in 114ms (Views: 97.3ms | ActiveRecord: 3.5ms | Allocations: 894052)
+
+
+Started POST "/login" for ::1 at 2020-09-05 23:39:27 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.34ms)
+Completed 200 OK in 220ms (Views: 2.6ms | ActiveRecord: 4.9ms | Allocations: 5087)
+
+
+Started POST "/login" for ::1 at 2020-09-05 23:39:30 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 233ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 996)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 23:39:30 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (48.01ms)
+Completed 200 OK in 68ms (Views: 63.5ms | ActiveRecord: 3.6ms | Allocations: 13871)
+
+
+Started POST "/movies" for ::1 at 2020-09-05 23:39:55 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Dragon Ball Z: Bojack Unbound", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0142238", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560", "list_movie"=>"", "existing_list"=>"Manga", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"Dragon Ball Z: Bojack Unbound", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0142238", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560"}}
+  [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", "Manga"], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("name", "picture", "rating", "description", "extra_info", "created_at", "updated_at", "extra_url", "list_movie_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dragon Ball Z: Bojack Unbound"], ["picture", "https://utellyassets9-1.imgix.net/api/Images/326d2853ff6885c41b9adb05278017f6/Redirect"], ["rating", 5], ["description", "https://www.imdb.com/title/tt0142238"], ["extra_info", "iTunes"], ["created_at", "2020-09-06 03:39:55.126396"], ["updated_at", "2020-09-06 03:39:55.126396"], ["extra_url", "https://itunes.apple.com/us/movie/dragon-ball-z-bojack-unbound-subtitled-original-version/id1381102560"], ["list_movie_id", 5]]
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+Completed 500 Internal Server Error in 12318ms (ActiveRecord: 10.1ms | Allocations: 96872)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/movies_controller.rb:29:in `create'
+Started GET "/users/1" for ::1 at 2020-09-05 23:40:27 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (25.29ms)
+Completed 200 OK in 57ms (Views: 34.0ms | ActiveRecord: 8.3ms | Allocations: 20932)
+
+
+Started POST "/movies" for ::1 at 2020-09-05 23:41:18 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Dragon Ball Z: Broly - The Legendary Super Saiyan", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/c3fb8811f4ef6fc7007490da532ce513/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0142242", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-broly-legendary-super-saiyan-original/id1441274555", "list_movie"=>"", "existing_list"=>"Manga", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"Dragon Ball Z: Broly - The Legendary Super Saiyan", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/c3fb8811f4ef6fc7007490da532ce513/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0142242", "extra_info"=>"iTunes", "extra_url"=>"https://itunes.apple.com/us/movie/dragon-ball-z-broly-legendary-super-saiyan-original/id1441274555"}}
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", "Manga"], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[36mMovie Create (1.1ms)[0m  [1m[32mINSERT INTO "movies" ("name", "picture", "rating", "description", "extra_info", "created_at", "updated_at", "extra_url", "list_movie_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dragon Ball Z: Broly - The Legendary Super Saiyan"], ["picture", "https://utellyassets9-1.imgix.net/api/Images/c3fb8811f4ef6fc7007490da532ce513/Redirect"], ["rating", 5], ["description", "https://www.imdb.com/title/tt0142242"], ["extra_info", "iTunes"], ["created_at", "2020-09-06 03:41:18.334808"], ["updated_at", "2020-09-06 03:41:18.334808"], ["extra_url", "https://itunes.apple.com/us/movie/dragon-ball-z-broly-legendary-super-saiyan-original/id1441274555"], ["list_movie_id", 5]]
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+Completed 204 No Content in 22ms (ActiveRecord: 5.7ms | Allocations: 11509)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 23:43:57 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.7ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 2562)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 23:45:17 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (3.8ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.06ms)
+Completed 200 OK in 12ms (Views: 4.8ms | ActiveRecord: 5.5ms | Allocations: 2562)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 23:45:40 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.98ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 2562)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 23:47:36 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (2.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.23ms)
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 4.4ms | Allocations: 2545)
+
+
+Started POST "/movies" for ::1 at 2020-09-05 23:48:21 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Nicky, Ricky, Dicky & Dawn", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/35fa43ae193c38dc326be3d20208c1c2/Redirect", "rating"=>1, "description"=>"https://www.imdb.com/title/tt3596176", "extra_info"=>"Hulu", "extra_url"=>"https://www.hulu.com/watch/9682181d-1872-4bbd-9d59-1a8cd083a29e", "list_movie"=>"", "existing_list"=>"Manga", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"Nicky, Ricky, Dicky & Dawn", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/35fa43ae193c38dc326be3d20208c1c2/Redirect", "rating"=>1, "description"=>"https://www.imdb.com/title/tt3596176", "extra_info"=>"Hulu", "extra_url"=>"https://www.hulu.com/watch/9682181d-1872-4bbd-9d59-1a8cd083a29e"}}
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", "Manga"], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[36mMovie Create (21.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "picture", "rating", "description", "extra_info", "created_at", "updated_at", "extra_url", "list_movie_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Nicky, Ricky, Dicky & Dawn"], ["picture", "https://utellyassets9-1.imgix.net/api/Images/35fa43ae193c38dc326be3d20208c1c2/Redirect"], ["rating", 1], ["description", "https://www.imdb.com/title/tt3596176"], ["extra_info", "Hulu"], ["created_at", "2020-09-06 03:48:21.641527"], ["updated_at", "2020-09-06 03:48:21.641527"], ["extra_url", "https://www.hulu.com/watch/9682181d-1872-4bbd-9d59-1a8cd083a29e"], ["list_movie_id", 5]]
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+Completed 204 No Content in 31ms (ActiveRecord: 23.5ms | Allocations: 4424)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 23:50:06 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.4ms)
+Completed 200 OK in 35ms (Views: 14.2ms | ActiveRecord: 9.0ms | Allocations: 14943)
+
+
+Started POST "/movies" for ::1 at 2020-09-05 23:50:25 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Rambo: First Blood Part II", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/2d2af388c972b6336d81986ce17f531f/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0089880", "extra_info"=>"Google Play", "extra_url"=>"https://play.google.com/store/movies/details/Rambo_First_Blood_II?gl=US&hl=en&id=Vt4PyVlN5Ys", "list_movie"=>"", "existing_list"=>"Drama", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"Rambo: First Blood Part II", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/2d2af388c972b6336d81986ce17f531f/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0089880", "extra_info"=>"Google Play", "extra_url"=>"https://play.google.com/store/movies/details/Rambo_First_Blood_II?gl=US&hl=en&id=Vt4PyVlN5Ys"}}
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", "Drama"], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[36mMovie Create (14.9ms)[0m  [1m[32mINSERT INTO "movies" ("name", "picture", "rating", "description", "extra_info", "created_at", "updated_at", "extra_url", "list_movie_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Rambo: First Blood Part II"], ["picture", "https://utellyassets9-1.imgix.net/api/Images/2d2af388c972b6336d81986ce17f531f/Redirect"], ["rating", 5], ["description", "https://www.imdb.com/title/tt0089880"], ["extra_info", "Google Play"], ["created_at", "2020-09-06 03:50:25.043522"], ["updated_at", "2020-09-06 03:50:25.043522"], ["extra_url", "https://play.google.com/store/movies/details/Rambo_First_Blood_II?gl=US&hl=en&id=Vt4PyVlN5Ys"], ["list_movie_id", 6]]
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Movie (0.26ms)
+Completed 200 OK in 35ms (Views: 1.9ms | ActiveRecord: 18.8ms | Allocations: 11526)
+
+
+Started GET "/users/1" for ::1 at 2020-09-05 23:51:23 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (2.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.55ms)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 2.9ms | Allocations: 2544)
+
+
+Started POST "/movies" for ::1 at 2020-09-05 23:52:07 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"Dragon Ball Z", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/e7698f2b5f49a7dbcaa5ab7dc39f60fb/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0121220", "extra_info"=>"Amazon Instant Video", "extra_url"=>"https://watch.amazon.com/detail?asin=B01BCMC0E8&creativeASIN=B01BCMC0E8&ie=UTF8&linkCode=xm2&tag=utellycom00-21", "list_movie"=>"", "existing_list"=>"Manga", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"Dragon Ball Z", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/e7698f2b5f49a7dbcaa5ab7dc39f60fb/Redirect", "rating"=>5, "description"=>"https://www.imdb.com/title/tt0121220", "extra_info"=>"Amazon Instant Video", "extra_url"=>"https://watch.amazon.com/detail?asin=B01BCMC0E8&creativeASIN=B01BCMC0E8&ie=UTF8&linkCode=xm2&tag=utellycom00-21"}}
+  [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", "Manga"], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "picture", "rating", "description", "extra_info", "created_at", "updated_at", "extra_url", "list_movie_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Dragon Ball Z"], ["picture", "https://utellyassets9-1.imgix.net/api/Images/e7698f2b5f49a7dbcaa5ab7dc39f60fb/Redirect"], ["rating", 5], ["description", "https://www.imdb.com/title/tt0121220"], ["extra_info", "Amazon Instant Video"], ["created_at", "2020-09-06 03:52:07.505391"], ["updated_at", "2020-09-06 03:52:07.505391"], ["extra_url", "https://watch.amazon.com/detail?asin=B01BCMC0E8&creativeASIN=B01BCMC0E8&ie=UTF8&linkCode=xm2&tag=utellycom00-21"], ["list_movie_id", 5]]
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Movie (0.34ms)
+Completed 200 OK in 19ms (Views: 0.7ms | ActiveRecord: 6.7ms | Allocations: 4721)
+
+
