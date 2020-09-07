@@ -1,2 +1,4 @@
 class UserListMoviesController < ApplicationController
+
+   
 end

@@ -1,4 +1,8 @@
 class MoviesController < ApplicationController
+    def index
+        movies = Movie.all 
+        render json: movies
+    end
 
     def create
         list_movie = ListMovie.find_by(category: params["existing_list"])

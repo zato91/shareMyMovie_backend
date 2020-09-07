@@ -4088,3 +4088,1003 @@ Processing by MoviesController#create as */*
 Completed 200 OK in 19ms (Views: 0.7ms | ActiveRecord: 6.7ms | Allocations: 4721)
 
 
+Started GET "/users" for ::1 at 2020-09-06 00:39:37 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 9, category: "Comedie", created_at: "2020-09-06 04:29:04", updated_at: "2020-09-06 04:29:04">
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 9, category: "Comedie", created_at: "2020-09-06 04:29:04", updated_at: "2020-09-06 04:29:04">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (30.64ms)
+Completed 200 OK in 51ms (Views: 39.7ms | ActiveRecord: 8.4ms | Allocations: 11591)
+
+
+Started GET "/use" for ::1 at 2020-09-06 00:40:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/use"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/movies" for ::1 at 2020-09-06 00:40:33 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for MoviesController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-09-06 00:41:25 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.25ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2614)
+
+
+Started GET "/users/3" for ::1 at 2020-09-06 00:41:38 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 9, category: "Comedie", created_at: "2020-09-06 04:29:04", updated_at: "2020-09-06 04:29:04">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.85ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 2442)
+
+
+Started GET "/users" for ::1 at 2020-09-06 00:42:29 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 9, category: "Comedie", created_at: "2020-09-06 04:29:04", updated_at: "2020-09-06 04:29:04">
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.1ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 9, category: "Comedie", created_at: "2020-09-06 04:29:04", updated_at: "2020-09-06 04:29:04">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.7ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 1.4ms | Allocations: 11506)
+
+
+Started GET "/list_movies" for ::1 at 2020-09-06 00:46:41 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ListMoviesController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/list_movie" for ::1 at 2020-09-06 00:47:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/list_movie"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/list_movies" for ::1 at 2020-09-06 00:47:28 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ListMoviesController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/list_movies" for ::1 at 2020-09-06 00:48:03 -0400
+Processing by ListMoviesController#index as HTML
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies"[0m
+  ↳ app/controllers/list_movies_controller.rb:5:in `index'
+No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ListMovie::ActiveRecord_Relation (0.42ms)
+Completed 200 OK in 19ms (Views: 6.6ms | ActiveRecord: 6.4ms | Allocations: 6419)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 14:14:36 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (2.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (23.03ms)
+Completed 200 OK in 86ms (Views: 26.4ms | ActiveRecord: 15.6ms | Allocations: 10604)
+
+
+Started POST "/login" for ::1 at 2020-09-06 14:20:48 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.71ms)
+Completed 200 OK in 233ms (Views: 2.0ms | ActiveRecord: 4.9ms | Allocations: 1224)
+
+
+Started POST "/login" for ::1 at 2020-09-06 14:20:49 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 241ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1003)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 14:20:49 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.53ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.9ms | Allocations: 2550)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 14:33:45 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (1.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (14.01ms)
+Completed 200 OK in 23ms (Views: 14.3ms | ActiveRecord: 2.5ms | Allocations: 2631)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 14:35:29 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (4.6ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.9ms | Allocations: 2544)
+
+
+Started POST "/movies" for ::1 at 2020-09-06 14:36:45 -0400
+Processing by MoviesController#create as */*
+  Parameters: {"name"=>"V.R. Troopers", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/9cc3bcc3e1843c8ccadd18410fb32b42/Redirect", "rating"=>4, "description"=>"https://www.imdb.com/title/tt0108978", "extra_info"=>"Netflix", "extra_url"=>"https://www.netflix.com/title/70183211", "list_movie"=>"", "existing_list"=>"Drama", "id"=>"1", "movie"=>{"id"=>"1", "name"=>"V.R. Troopers", "picture"=>"https://utellyassets9-1.imgix.net/api/Images/9cc3bcc3e1843c8ccadd18410fb32b42/Redirect", "rating"=>4, "description"=>"https://www.imdb.com/title/tt0108978", "extra_info"=>"Netflix", "extra_url"=>"https://www.netflix.com/title/70183211"}}
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."category" = $1 LIMIT $2[0m  [["category", "Drama"], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:4:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:5:in `create'
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" WHERE "list_movies"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[36mMovie Create (22.6ms)[0m  [1m[32mINSERT INTO "movies" ("name", "picture", "rating", "description", "extra_info", "created_at", "updated_at", "extra_url", "list_movie_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "V.R. Troopers"], ["picture", "https://utellyassets9-1.imgix.net/api/Images/9cc3bcc3e1843c8ccadd18410fb32b42/Redirect"], ["rating", 4], ["description", "https://www.imdb.com/title/tt0108978"], ["extra_info", "Netflix"], ["created_at", "2020-09-06 18:36:46.137053"], ["updated_at", "2020-09-06 18:36:46.137053"], ["extra_url", "https://www.netflix.com/title/70183211"], ["list_movie_id", 6]]
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/movies_controller.rb:22:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Movie (0.32ms)
+Completed 200 OK in 160ms (Views: 1.9ms | ActiveRecord: 33.4ms | Allocations: 11210)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 14:43:39 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (16.41ms)
+Completed 200 OK in 33ms (Views: 19.1ms | ActiveRecord: 1.1ms | Allocations: 2631)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 14:45:23 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (49.26ms)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 0.8ms | Allocations: 2547)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 14:50:07 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (11.6ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.7ms | Allocations: 2544)
+
+
+Started GET "/movies" for ::1 at 2020-09-06 14:53:06 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for MoviesController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/movies" for ::1 at 2020-09-06 14:53:53 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:4:in `index'
+No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Movie::ActiveRecord_Relation (1.49ms)
+Completed 200 OK in 30ms (Views: 16.6ms | ActiveRecord: 10.4ms | Allocations: 10389)
+
+
+Started GET "/movies" for ::1 at 2020-09-06 14:54:58 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:4:in `index'
+No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Movie::ActiveRecord_Relation (1.71ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms | Allocations: 2768)
+
+
+Started GET "/users" for ::1 at 2020-09-06 14:55:10 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 9, category: "Comedie", created_at: "2020-09-06 04:29:04", updated_at: "2020-09-06 04:29:04">
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.1ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 9, category: "Comedie", created_at: "2020-09-06 04:29:04", updated_at: "2020-09-06 04:29:04">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (31.84ms)
+Completed 200 OK in 58ms (Views: 43.9ms | ActiveRecord: 8.0ms | Allocations: 23592)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 15:02:53 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (3.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (46.8ms)
+Completed 200 OK in 64ms (Views: 47.0ms | ActiveRecord: 4.2ms | Allocations: 25198)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 15:05:13 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (4.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (5.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (23.28ms)
+Completed 200 OK in 27ms (Views: 14.0ms | ActiveRecord: 10.7ms | Allocations: 5987)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 15:05:13 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (4.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (18.71ms)
+Completed 200 OK in 31ms (Views: 14.1ms | ActiveRecord: 14.6ms | Allocations: 5987)
+
+
+Started GET "/listmovies" for ::1 at 2020-09-06 15:10:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/listmovies"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/list_movies" for ::1 at 2020-09-06 15:10:29 -0400
+Processing by ListMoviesController#index as HTML
+  [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies"[0m
+  ↳ app/controllers/list_movies_controller.rb:5:in `index'
+No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ListMovie::ActiveRecord_Relation (0.54ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1708)
+
+
+Started GET "/list_movies" for ::1 at 2020-09-06 15:12:05 -0400
+Processing by ListMoviesController#index as HTML
+  [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies"[0m
+  ↳ app/controllers/list_movies_controller.rb:5:in `index'
+No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 5]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 6]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 8]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 9]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ListMovie::ActiveRecord_Relation (30.93ms)
+Completed 200 OK in 52ms (Views: 36.1ms | ActiveRecord: 11.6ms | Allocations: 19853)
+
+
+Started GET "/list_movies" for ::1 at 2020-09-06 15:12:58 -0400
+Processing by ListMoviesController#index as HTML
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 7098)
+
+
+  [1m[36mCACHE ListMovie Load (0.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `category' for #<ListMovie::ActiveRecord_Relation:0x00007f819dc839a0>):
+  
+app/controllers/list_movies_controller.rb:5:in `index'
+Started GET "/list_movies" for ::1 at 2020-09-06 15:14:46 -0400
+Processing by ListMoviesController#index as HTML
+  [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies"[0m
+  ↳ app/controllers/list_movies_controller.rb:4:in `map'
+No serializer found for resource: "Manga"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.08ms)
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 3.3ms | Allocations: 5456)
+
+
+Started GET "/list_movies" for ::1 at 2020-09-06 15:15:45 -0400
+  
+SyntaxError (/Users/zato/Flatiron/code/MOD5/shareMyMovie/ShareMyMovie/app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+...       l = list_movie, include: [:movies]
+...                       ^~~~~~~~):
+  
+app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+Started GET "/list_movies" for ::1 at 2020-09-06 15:16:12 -0400
+  
+SyntaxError (/Users/zato/Flatiron/code/MOD5/shareMyMovie/ShareMyMovie/app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+...   movie = list_movie, include: [:movies]
+...                       ^~~~~~~~):
+  
+app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+Started GET "/list_movies" for ::1 at 2020-09-06 15:16:26 -0400
+  
+SyntaxError (/Users/zato/Flatiron/code/MOD5/shareMyMovie/ShareMyMovie/app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+...   movie = list_movie, include: [:movies]
+...                       ^~~~~~~~):
+  
+app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+Started GET "/list_movies" for ::1 at 2020-09-06 15:16:33 -0400
+  
+SyntaxError (/Users/zato/Flatiron/code/MOD5/shareMyMovie/ShareMyMovie/app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+...   movie = list_movie, include: [:movies]
+...                       ^~~~~~~~):
+  
+app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+app/controllers/list_movies_controller.rb:7: syntax error, unexpected tLABEL
+Started GET "/list_movies" for ::1 at 2020-09-06 15:17:30 -0400
+Processing by ListMoviesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1674)
+
+
+  
+NameError (uninitialized constant ListMoviesController::ListMovies):
+  
+app/controllers/list_movies_controller.rb:4:in `index'
+Started GET "/list_movies" for ::1 at 2020-09-06 15:18:13 -0400
+Processing by ListMoviesController#index as HTML
+  [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies"[0m
+  ↳ app/controllers/list_movies_controller.rb:5:in `index'
+No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 5]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 6]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 8]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 9]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ListMovie::ActiveRecord_Relation (20.56ms)
+Completed 200 OK in 34ms (Views: 24.5ms | ActiveRecord: 6.7ms | Allocations: 19889)
+
+
+Started GET "/list_movies" for ::1 at 2020-09-06 15:27:11 -0400
+Processing by ListMoviesController#index as HTML
+  [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies"[0m
+  ↳ app/controllers/list_movies_controller.rb:6:in `index'
+No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ListMovie::ActiveRecord_Relation (0.41ms)
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 6492)
+
+
+Started GET "/list_movies" for ::1 at 2020-09-06 15:28:18 -0400
+Processing by ListMoviesController#index as HTML
+  [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies"[0m
+  ↳ app/controllers/list_movies_controller.rb:6:in `index'
+No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ListMovie::ActiveRecord_Relation (0.45ms)
+Completed 200 OK in 16ms (Views: 1.3ms | ActiveRecord: 6.0ms | Allocations: 5984)
+
+
+Started GET "/list_movies" for ::1 at 2020-09-06 15:28:53 -0400
+Processing by ListMoviesController#index as HTML
+  [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies"[0m
+  ↳ app/controllers/list_movies_controller.rb:6:in `index'
+No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 5]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 6]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 8]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."list_movie_id" = $1[0m  [["list_movie_id", 9]]
+[active_model_serializers]   ↳ app/controllers/list_movies_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ListMovie::ActiveRecord_Relation (21.88ms)
+Completed 200 OK in 34ms (Views: 19.2ms | ActiveRecord: 6.7ms | Allocations: 19680)
+
+
+Started GET "/users" for ::1 at 2020-09-06 15:33:14 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 9, category: "Comedie", created_at: "2020-09-06 04:29:04", updated_at: "2020-09-06 04:29:04">
+[active_model_serializers]   [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mListMovie Load (0.2ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 9, category: "Comedie", created_at: "2020-09-06 04:29:04", updated_at: "2020-09-06 04:29:04">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (67.39ms)
+Completed 200 OK in 88ms (Views: 68.0ms | ActiveRecord: 15.3ms | Allocations: 43901)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 15:33:25 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.31ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.0ms | Allocations: 6095)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 15:49:18 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (34.62ms)
+Completed 200 OK in 56ms (Views: 34.8ms | ActiveRecord: 1.9ms | Allocations: 25152)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 15:49:18 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.28ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 1.3ms | Allocations: 5987)
+
+
+Started POST "/login" for ::1 at 2020-09-06 16:38:36 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.04ms)
+Completed 200 OK in 281ms (Views: 6.9ms | ActiveRecord: 0.8ms | Allocations: 1302)
+
+
+Started POST "/login" for ::1 at 2020-09-06 16:38:36 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+Started GET "/users/1" for ::1 at 2020-09-06 16:38:36 -0400
+  [1m[36mUser Load (23.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 291ms (Views: 0.7ms | ActiveRecord: 23.6ms | Allocations: 1525)
+
+
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.7ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (64.74ms)
+Completed 200 OK in 72ms (Views: 64.3ms | ActiveRecord: 2.5ms | Allocations: 6104)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 16:38:36 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.1ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 2.0ms | Allocations: 5987)
+
+
+Started POST "/login" for ::1 at 2020-09-06 16:49:32 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 200 OK in 266ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 1048)
+
+
+Started POST "/login" for ::1 at 2020-09-06 16:49:34 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.23ms)
+Completed 200 OK in 269ms (Views: 2.2ms | ActiveRecord: 0.9ms | Allocations: 1007)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 16:49:34 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (3.0ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (97.5ms)
+Completed 200 OK in 103ms (Views: 94.1ms | ActiveRecord: 4.6ms | Allocations: 6101)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 16:49:35 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (2.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (41.71ms)
+Completed 200 OK in 51ms (Views: 41.2ms | ActiveRecord: 3.6ms | Allocations: 5991)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 22:17:51 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (4.3ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (95.7ms)
+Completed 200 OK in 151ms (Views: 93.1ms | ActiveRecord: 5.9ms | Allocations: 25209)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 22:17:51 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (17.72ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 1.7ms | Allocations: 5987)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 22:22:50 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (1.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.33ms)
+Completed 200 OK in 20ms (Views: 13.4ms | ActiveRecord: 3.8ms | Allocations: 5987)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 22:22:50 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.6ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (29.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (45.16ms)
+Completed 200 OK in 51ms (Views: 15.7ms | ActiveRecord: 33.0ms | Allocations: 5987)
+
+
+Started GET "/list_movies" for ::1 at 2020-09-06 22:23:21 -0400
+Processing by ListMoviesController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 2436)
+
+
+  
+NoMethodError (undefined method `list_movie=' for #<Class:0x00007f819cc30030>):
+  
+app/controllers/list_movies_controller.rb:5:in `index'
+Started GET "/users/1" for ::1 at 2020-09-06 22:23:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.4ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.67ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 1.3ms | Allocations: 5984)
+
+
+Started POST "/login" for ::1 at 2020-09-06 22:53:11 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.57ms)
+Completed 200 OK in 279ms (Views: 1.4ms | ActiveRecord: 5.6ms | Allocations: 4241)
+
+
+Started POST "/login" for ::1 at 2020-09-06 22:53:11 -0400
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"zara", "password"=>"[FILTERED]", "user"=>{"username"=>"zara"}}
+Started GET "/users/1" for ::1 at 2020-09-06 22:53:11 -0400
+  [1m[36mUser Load (53.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zara"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 200 OK in 316ms (Views: 0.7ms | ActiveRecord: 53.0ms | Allocations: 1544)
+
+
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.9ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (58.4ms)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 2.2ms | Allocations: 19562)
+
+
+Started GET "/users/1" for ::1 at 2020-09-06 22:53:12 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mListMovie Load (0.5ms)[0m  [1m[34mSELECT "list_movies".* FROM "list_movies" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<ListMovie id: 5, category: "Manga", created_at: "2020-09-06 02:06:56", updated_at: "2020-09-06 02:06:56">
+[active_model_serializers]   [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" INNER JOIN "list_movies" ON "movies"."list_movie_id" = "list_movies"."id" INNER JOIN "user_list_movies" ON "list_movies"."id" = "user_list_movies"."list_movie_id" WHERE "user_list_movies"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:11:in `show'
+[active_model_serializers] No serializer found for resource: #<Movie id: 2, name: "Dragon Ball Z: Bojack Unbound", picture: "https://utellyassets9-1.imgix.net/api/Images/326d2...", rating: 4, description: "https://www.imdb.com/title/tt0142238", extra_info: "iTunes", created_at: "2020-09-06 02:54:06", updated_at: "2020-09-06 02:54:06", extra_url: "https://itunes.apple.com/us/movie/dragon-ball-z-bo...", list_movie_id: 6>
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.22ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 1.6ms | Allocations: 5987)
+
+

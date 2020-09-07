@@ -4,4 +4,6 @@ class ListMovie < ApplicationRecord
     has_many :movies
 
     validates :category, presence: true
+
+    
 end
