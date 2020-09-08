@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+l = ListMovie.create(category:"test")
+m = Movie.create(name:"film test", picture: "https://utellyassets9-1.imgix.net/api/Images/bcd3212f6751caabb64a3caf28def76e/Redirect", 
+    rating: 4, description: "yep", extra_info: "yep",
+    extra_url: "yep", list_movie: l)
+
+    UserListMovie.create(user:User.find(1),list_movie:l)
