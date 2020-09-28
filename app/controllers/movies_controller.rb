@@ -40,6 +40,12 @@ class MoviesController < ApplicationController
     end
 end
 
+private 
+
+def movie_params
+    params.require(:movies).permit(:name, :picture, :description, :extra_info, :extra_url, :list_movie_id)
+  
+end
 # t.string "name"
 # t.string "picture"
 # t.integer "rating"
