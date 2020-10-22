@@ -46,10 +46,3 @@ def movie_params
     params.require(:movies).permit(:name, :picture, :description, :extra_info, :extra_url, :list_movie_id)
   
 end
-# t.string "name"
-# t.string "picture"
-# t.integer "rating"
-# t.string "description"
-# t.string "extra_info"
-# t.string "extra_url"
-# t.integer "list_movie_id"

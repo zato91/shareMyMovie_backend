@@ -1,5 +1,18 @@
 class UsersController < ApplicationController
     #  skip_before_action :logged_in?, only: [:create, :login]
+    def friender_name
+        user = User.find(self.friender_id)
+        user.name 
+    end 
+
+    def friendee_name
+        user = User.find(self.friendee_id)
+        user.name 
+    end
+
+    def user_ids
+        [self.frirend_id, self,friendee_id]
+    end 
 
     def index
         users = User.all 
@@ -31,6 +44,7 @@ class UsersController < ApplicationController
 
         if user && user.authenticate(params[:password])
             render json: {user: user, token: encode_token({user_id: user.id})}
+            
         else
             render json: {error: "Invalid username or Password"}
         end
