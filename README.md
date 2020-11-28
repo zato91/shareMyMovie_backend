@@ -14,17 +14,7 @@
 ### 🏠 [Homepage](https://github.com/zato91/ShareMyMovie)
 front-end respository : https://github.com/zato91/ShareMyMovie
 
-## Install
 
-```sh
-npm install or yarn
-```
-
-## Usage
-
-```sh
-npm run start or yarn start
-```
 
 ## Author
 
