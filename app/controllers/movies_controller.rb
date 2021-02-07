@@ -5,9 +5,7 @@ class MoviesController < ApplicationController
     end
 
     def create
-        list_movie = ListMovie.find_by(category: params["existing_list"])
-        user = User.find(params[:id].to_i)
-        list_c = ListMovie.create(category:params["list_movie"])
+         byebug
         if list_c.present?
         movie = Movie.new(name:params["name"], picture: params["picture"], 
             rating: params[:rating].to_i, description: params["description"], extra_info: params["extra_info"],

@@ -1,11 +1,7 @@
 class ListMoviesController < ApplicationController
 
-    def index
-
-        
+    def index  
         list_movie = ListMovie.all 
-
-        
         render json: list_movie, include: [:movies]
     end
 
