@@ -30,6 +30,13 @@ class MoviesController < ApplicationController
          end
         
     end 
+    def selectDelete
+        
+        lsit_movie = ListMovie.find(params[:id])
+        lsit_movie.movies.destroy_all
+        lsit_movie.destroy
+        
+    end
 
 
     def destroy
