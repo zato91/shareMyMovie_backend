@@ -5,38 +5,27 @@ class MoviesController < ApplicationController
     end
 
     def create
-        list_movie = ListMovie.find_by(category: params["existing_list"])
+        
         user = User.find(params[:id].to_i)
-        list_c = ListMovie.create(category:params["list_movie"])
-        if list_c.present?
+        list = ListMovie.find_or_create_by(category:params["list_movie"])
+        
         movie = Movie.new(name:params["name"], picture: params["picture"], 
             rating: params[:rating].to_i, description: params["description"], extra_info: params["extra_info"],
-            extra_url: params["extra_url"], list_movie_id: list_c.id)
-            join = list_movie.user_list_movies.build(user_id:user.id, list_movie_id:list_movie.id)
-            join.save
-        else 
+            extra_url: params["extra_url"], list_movie_id: list.id)
+
         
-         list_movie.present?
-            movie = Movie.new(name:params["name"], picture: params["picture"], 
-                rating: params[:rating].to_i, description: params["description"], extra_info: params["extra_info"],
-                extra_url: params["extra_url"], list_movie_id: list_movie.id)
-         end
+            
+     
 
          if movie.valid?
+            # UserListMovie.create(user_id:user.id, list_movie_id:list.id)
             movie.save
             render json: movie
         else
-            render json: {error: "Failed to create the user"}
+            render json: {error: "Failed to create the movie"}
          end
         
     end 
-    def selectDelete
-        
-        lsit_movie = ListMovie.find(params[:id])
-        lsit_movie.movies.destroy_all
-        lsit_movie.destroy
-        
-    end
 
 
     def destroy
