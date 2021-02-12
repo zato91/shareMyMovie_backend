@@ -7,7 +7,13 @@ class MoviesController < ApplicationController
     def create
         
         user = User.find(params[:id].to_i)
-        list = ListMovie.find_or_create_by(category:params["list_movie"])
+        
+        if ListMovie.exists?(category:params["list_movie"])
+        list = ListMovie.find_by(category:params["list_movie"])
+        else 
+        list = ListMovie.create(category:params["list_movie"])
+        UserListMovie.create(user_id:user.id, list_movie_id:list.id)
+        end
         
         movie = Movie.new(name:params["name"], picture: params["picture"], 
             rating: params[:rating].to_i, description: params["description"], extra_info: params["extra_info"],
@@ -18,7 +24,6 @@ class MoviesController < ApplicationController
      
 
          if movie.valid?
-            # UserListMovie.create(user_id:user.id, list_movie_id:list.id)
             movie.save
             render json: movie
         else
